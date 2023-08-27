@@ -1,0 +1,149 @@
+\documentclass[11pt,a4paper, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{soul}
+
+\newcommand{\thev}{Th\'{e}venin Equivalent}
+
+\setlength\columnsep{40pt}
+
+\title{\textbf{Week 5: EGB120 lecture notes }}
+\author{By Pilote Muhoza}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+\section{Non-Ideal Source}
+\begin{itemize}
+\item Real sources often have many limitation in the term of voltage and current delivery.
+\item The most commonly modelled, and most useful for a lenear circuit theory, is some form of resistance associated with the source
+\end{itemize}
+
+%% Add figure
+
+\section {Th\'{e}venin Equivalent}
+\begin{itemize}
+
+\item The Th\'{e} venin equivalent circuit is a voltage source with  series resistance.
+\item characterised by the three related parameters: $v_{Th}, R_{Th}, $ and $i_{sc}$.
+\end{itemize}
+
+%% figure
+
+	\subsection{Formula}
+	\begin{figure}[!h]
+		\begin{align}
+	i_{scc}=\frac{v_{Th}}{R_{Th}}
+	\end{align}
+	\caption{Th\'{e}venin formula}
+	\end{figure}
+
+	
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=10 cm]{thev}
+	\caption{{Thev calculations}}
+\end{figure}
+\newpage
+\section{Norton Equivalent}
+\begin{itemize}
+\item You can equally use a current source with a resistor in parallel to get exactly the same properties.
+\item This is called equivalent circuit.
+
+	\end{itemize}
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.5]{nor}
+	\caption{Nortorn equivalent}
+	\end{figure}
+\section {\textbf{\thev $<=>$ Nortorn Equivalent}}
+
+	\begin{itemize}
+	\item You can substitute a \thev circuit for a Norton equivalent circuit and vice versa
+	\item	Calculating equivalent component values required no extra info:
+	
+	\end{itemize}
+	\begin{figure}[!h]
+	\includegraphics[scale=0.4]{new}
+	\caption{\thev and Norton relationship}
+	\end{figure}
+	
+
+		%%page 2
+
+\section{Superposition}
+
+	\begin{enumerate}
+	\item 	Superposition is a principal of linear systems.
+	\item We can use it to simplify circuit analysis by noting that we can treat each source independently. 
+	\item Circuits can be simplified by having only one source active at a time, changing all the other sources to zero.
+	\item Net effect on the coltage or current can be found by the summing components due to individual sources.
+	\end{enumerate}
+	\subsection{Conditions}
+	\begin{enumerate}
+	
+	\item	For a \textcolor{blue}{\textbf{current source}}, changing to zero means replacing it with an \textbf{open circuit} \hl{(zero current, whatever voltage)}.
+	\item For a \textcolor{red}{\textbf{voltage source}} changing to zero means replacing it with a \textbf{short circuit} \hl{(zero voltage, whatever current)}.
+	\item Work out total voltage or current from the sum of the individual contributions.
+	\end{enumerate}
+	\subsection{Example calculations}
+	
+	\begin{figure}[!h]
+	\includegraphics[scale=0.3]{ex}
+	\caption{Step (1)}
+	\includegraphics[scale=0.3]{ex1}\caption{Step (2)}
+	
+	
+	\end{figure}
+	
+	\begin{figure}[H]
+	\includegraphics[scale=0.3]{ex2}
+	\caption{Step (3)}
+	\includegraphics[scale=0.3]{ex3}
+	\end{figure}
+
+	
+\section{Th\'{e}venin's Theorem}
+
+	\begin{figure}[H]
+	\includegraphics[scale=0.3]{re}
+	\caption{Step (1)}
+	\end{figure}
+	
+	\begin{figure}[H]
+	
+	\includegraphics[scale=0.3]{re1}
+	\caption{ Step(2)}
+	\end{figure}
+	
+	\begin{figure}[H]
+	\includegraphics[scale=0.3]{re2}
+	\caption{Step (3)}
+	\end{figure}
+
+\section{Northon Theoren}
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{n}
+	\caption{Sample calculations of Notorn Theorem}
+	
+	\end{figure}
+
+	
+	
+	
+	
+	
+	
+	
+\end{document}
